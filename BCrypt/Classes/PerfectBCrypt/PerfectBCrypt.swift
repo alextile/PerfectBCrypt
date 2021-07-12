@@ -7,6 +7,7 @@ open class BCrypt {
     public enum SaltPrefixType:String {
         case _2A = "2a"
         case _2B = "2b"
+        case _2Y = "2y"
     }
     
     public enum Exception: Error {
@@ -36,7 +37,7 @@ open class BCrypt {
     }
     /// Generate salt based on the settings
     /// - parameters:
-    ///   - prefix: 2A or 2B
+    ///   - prefix: 2A, 2B, or 2Y
     ///   - rounds: a number in [4, 31]
     /// - returns: a salted string.
     /// - throws: Exception
