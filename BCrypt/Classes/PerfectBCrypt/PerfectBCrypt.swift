@@ -1,5 +1,3 @@
-
-import bcryptc
 import Foundation
 
 open class BCrypt {

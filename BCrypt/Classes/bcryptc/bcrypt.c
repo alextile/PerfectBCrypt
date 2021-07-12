@@ -100,6 +100,9 @@ bcrypt_hashpass(const char *key, const char *salt, char *encrypted,
 			key_len = 72;
 		key_len++; /* include the NUL */
 		break;
+    case 'y':
+        key_len = (u_int8_t)(strlen(key) + 1);
+        break;
 	default:
 		 goto inval;
 	}
